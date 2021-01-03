@@ -1,7 +1,23 @@
-1. For running the server following command will be used:
-	python server.py
-2. For running the API in Postman and in the browser following are the GET API:
-	First API: 'http://127.0.0.1:5000/api/fetchapidata'
-	Second API: 'http://127.0.0.1:5000/api/fetchapi2data'
-	Third API: 'http://127.0.0.1:5000/api/fetchapi3data'
-	Cumulative List: 'http://127.0.0.1:5000/api/getdatafromdb'
+********************************WORK LOG*********************************
+
+1. Firstly, I made a folder named as flaskbackend. Afterwards, I opened the cmd in that directory and opened cmd.
+2. In the cmd, I wrote command 'code .' for opening vscode.
+3. Then I installed Flask by 'pip install Flask'.
+4. After installing, I made the Hello World app and ran on the browser as well as the postman, as I was learning from the scratch.
+5. Then I installed MYSQL server only, with command line client, tried the basic commands on it, it's installation took a little bit of time as when i installed it first it command line was not opening up then I had to uninstall and install it again.
+6. While trying the commands I made database by using the query: 'CREATE DATABASE flasktask;'
+7. Afterwards, I started working on the connection of MYSQL and Flask app.
+8. After going through so many links I finally got a link for it's connection but while doing so I firstly check the API urls, extracted the collection on my Desktop Postman, and then some of them werenot working then had to go through the other collections too.
+9. I finally got the first api in my flask app. At first, I was getting the data in bytes, I started trying to convert it into the JSON or dictionary, while searching for that purpose I got through the 'requests' python library and its builtin function of converting data into json.
+10. I used .json() of requests, but before that i tried json.loads, json.dumps, jsonify, but unfortunately none of them had worked for me, so because of that it took my time.
+11. As it was my very first time working on Flask, so I had to read the documentation first then had to apply it afterwards.
+12. Then, I connected the mysql to Flask, again there were many options, but I chose to connect mysql to flask through SQLAlchemy.
+13. Right after connecting them, I worked on Flask models. Firstly, I made the table in db with the attributes of the respective API and also made it's model, and through coding inserted the API data into that table.
+14. For inserting data, I firstly extracted the attributes values and then sent it to the db, it took some of my time too because every api has different format of data.
+15. After I was done with extracting and inserting of data. I worked on CumulativeList. The problem which I got here was my query was returning tablename and index of the table then I got it done by adding __repr__ function.
+16. And then, when i go through the assessment document's hint, I saw Flask Migrate there. I read the documentation and watched videos and applied it on my flask server.
+17. The problem which I faced here was that I didn't get the scripts of all the tables. When I searched through it, I came to know that as I already added the tables, because of that my current tables script was not there.
+18. For checking migration is working for me or not I dropped all the tables and an dran the commands and it worked.
+19. I forgot to mention earlier that before doing the CumulativeList task I first done the Flask blueprints done.
+20. And instlled the imports which i need to by pip install name;
+21. Then I started doing Docker's part, I containarized mysql first and then worked on Flask.
